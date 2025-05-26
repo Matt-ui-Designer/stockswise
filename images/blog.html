@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stockwise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+    <header class="fixed top-0 left-0 right-0 bg-[#f6f5f4] shadow-sm z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+				<div class="mb-0">
+                <img src="LOGO.svg" alt="Logo" class="h-20">
+				</div>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="Blog.html" class="nav-link text-primary">Blog</a>
+                    <a href="About us.html" class="nav-link text-gray-700 hover:text-primary">About us</a>
+                    <a href="Contact.html" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center">
+                <a href="../index.html" class="px-6 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                 Back
+                </a>
+                <button class="md:hidden ml-4" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu md:hidden absolute top-20 left-0 w-full bg-white shadow-lg">
+            <nav class="flex flex-col py-4">
+                <a href="Blog.html" class="nav-link px-6 py-2 text-primary">Blog</a>
+                <a href="About us.html" class="nav-link px-6 py-2 text-gray-700 hover:text-primary">About us</a>
+                <a href="Contact.html" class="nav-link px-6 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-grow mt-20">
+		<div class="image-section">
+            <img class="desktop-image" src="web-blog.webp" alt="web-blog">
+            <img class="mobile-image" src="mobile-blog.webp" alt="mobile-blog">
+        </div>
+    </main>
+    <footer class="bg-[#f6f5f4] mt-auto">
+        <div class="max-w-[1440px] mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="hidden md:block">
+                    <img src="LOGO.svg" alt="Logo" class="h-20">
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="Terms of service.html" class="nav-link text-gray-600 hover:text-primary">Terms of service</a>
+                    <a href="Privacy policy.html" class="nav-link text-gray-600 hover:text-primary">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

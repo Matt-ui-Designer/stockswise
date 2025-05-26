@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stockwise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="images/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '2px',
+                        DEFAULT: '4px',
+                        'md': '8px',
+                        'lg': '12px',
+                        'xl': '16px',
+                        '2xl': '20px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                        'button': '4px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+    <header class="fixed top-0 left-0 right-0 bg-[#f6f5f4] shadow-sm z-50">
+        <div class="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+				<div class="mb-0">
+                <img src="images/LOGO.svg" alt="Logo" class="h-20" style="top: 2px;">
+				</div>
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="images/Blog.html" class="nav-link text-gray-700 hover:text-primary">Blog</a>
+                    <a href="images/About us.html" class="nav-link text-gray-700 hover:text-primary">About us</a>
+                    <a href="images/Contact.html" class="nav-link text-gray-700 hover:text-primary">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center">
+                <a href="https://chat.whatsapp.com/BaAzEJYVVlfKgcF5x3yveP" target="_blank" class="hidden md:block">
+                    <img src="images/button.webp" alt="WhatsApp" class="h-10" style="width: auto; height: 50px;">
+                </a>
+                <button class="md:hidden ml-4" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu md:hidden absolute top-20 left-0 w-full bg-white shadow-lg">
+            <nav class="flex flex-col py-4">
+                <a href="images/Blog.html" class="nav-link px-6 py-2 text-gray-700 hover:text-primary">Blog</a>
+                <a href="images/About us.html" class="nav-link px-6 py-2 text-gray-700 hover:text-primary">About us</a>
+                <a href="images/Contact.html" class="nav-link px-6 py-2 text-gray-700 hover:text-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-grow mt-20">
+		<div class="image-section" style="position: relative;">
+			<a href="https://chat.whatsapp.com/BaAzEJYVVlfKgcF5x3yveP" class="hidden md:block" target="_blank" style="position: absolute; top: 20.6%; left: 16%; width: 15%; ">
+			<img src="images/button.webp" alt="WhatsApp">
+            </a>
+			<a href="https://chat.whatsapp.com/BaAzEJYVVlfKgcF5x3yveP" class="block md:hidden" target="_blank" style="position: absolute; top: 16.4%; left: 12%; width: 40%; ">
+			<img src="images/button.webp" alt="WhatsApp">
+            </a>
+            <img class="desktop-image" src="images/web-home.webp" alt="web-home">
+            <img class="mobile-image" src="images/mobile-home.webp" alt="mobile-home">
+        </div>
+		<!-- 表单区域 -->    
+        <div class="custom-form-container" style="margin-bottom: 60px;">
+            <h2 style="text-align: center; color: #101010; font-size: 33px; font-weight: 800; margin-bottom: 20px;">Get in touch</h2>
+            <p style="text-align: center; sans-sereif; font-size:22px; margin-bottom: 30px">Send us a message and we'll get back to you as soon as we can.</p>
+			<!--需要设置服务器端 URL“/submit-form”-->
+            <form name="stock-form" method="POST" data-netlify="true" onsubmit="gtag_form_conversion()">
+                <div>
+                    <label for="name" class="text-sm">Name*</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div>
+                    <label for="email" class="text-sm">Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div>
+                    <label for="phone" class="text-sm">WhatsApp Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div>
+                    <label for="message" class="text-sm">Message*</label>
+                    <input type="text" id="message" name="message" placeholder="Enter" required>
+                </div>
+                <button type="submit">Send Message</button>
+
+                <p style="color: #7B7B7B color: darkslategray; font-size: 15px; text-align: left; margin-top: 10px;">*Please ensure that you have Downloaded WhatsApp and the WhatsApp number you provide is correct.</p>
+            </form>
+        </div>
+
+    </main>
+    <footer class="bg-[#f6f5f4] mt-auto">
+        <div class="max-w-[1440px] mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="hidden md:block">
+                    <img src="images/LOGO.svg" alt="Logo" class="h-20">
+                </div>
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <a href="images/Terms of service.html" class="nav-link text-gray-600 hover:text-primary">Terms of service</a>
+                    <a href="images/Privacy policy.html" class="nav-link text-gray-600 hover:text-primary">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

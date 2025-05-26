@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('fonts/AvenirNextW1G-Regular.woff2') format('woff2');
+}
+
+body {
+    min-height: 1024px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    font-family: 'Avenir Next W1G', sans-serif;
+    position: relative;
+	font-weight: 600;
+	font-size: 20px; 
+	margin-left: 30px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.h-10 {
+    width: auto;  
+    height: 50px; 
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 保证视频覆盖整个容器并保持比例 */
+    z-index: -1;  /* 将视频放置在所有其他元素后面 */
+}
+
+/* 手机端样式 */
+@media (max-width: 768px) {
+    .desktop-image {
+        display: none; 
+	}
+    .mobile-image {
+        width: 100%; 
+        height: 100%;  
+        margin: 0 auto; 
+        object-fit: contain; 
+		z-index: 1;
+	}
+	.mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+	.button {
+		width: 70%;
+		position: absolute; 
+		bottom: 10%;
+		left: 50%; 
+		transform: translateX(-50%);
+	}
+}
+/* 桌面端样式 */
+@media (min-width: 768px) {
+	.desktop-image {
+    width: 100%; 
+    height: 100%;  
+    object-fit: contain; 
+	z-index: 1;
+    }
+
+    .mobile-image {
+        display: none; 
+    }
+	.button {
+		width: 20%;  
+		position: absolute; 
+		bottom: 10%; 
+		left: 50%; 
+		transform: translateX(-50%);
+	}	
+
+}
+   /* 限定作用范围，仅应用于表单 */
+        .custom-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+
+
+        .custom-form-container input,
+        .custom-form-container button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .custom-form-container input::placeholder {
+            color: #888;
+        }
+
+        .custom-form-container input {
+            background-color: #F6F5F4;
+            color: white;
+            border: none;
+        }
+
+        .custom-form-container input:focus{
+            outline: none;
+            border-color: #00c853;
+        }
+
+        .custom-form-container button {
+            background-color: #00c853;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+			font-size: 20px;
+        }
+
+        .custom-form-container button:hover {
+            background-color: #03AD4A;
+        }
+        .custom-form-container .text-sm{
+			color: black; 
+			font-size: 20px;
+			margin-bottom: 20px;
+        }
