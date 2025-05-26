@@ -65,13 +65,56 @@ body {
     .mobile-menu.active {
         display: flex;
     }
-	.button {
-		width: 70%;
-		position: absolute; 
-		bottom: 10%;
-		left: 50%; 
-		transform: translateX(-50%);
-	}
+     .button {
+	width: 70%;
+	position: absolute; 
+	bottom: 10%;
+	left: 50%; 
+	transform: translateX(-50%);
+     }
+	header img[alt="Logo"] {
+    height: 48px !important;
+    }
+    .nav-link {
+        font-size: 16px;
+        margin-left: 16px;
+    }
+
+    .custom-form-container {
+        padding: 24px;
+        margin-top: 30px;
+    }
+
+    .custom-form-container input,
+    .custom-form-container button {
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .custom-form-container .text-sm {
+        font-size: 8px;
+        margin-bottom: 12px;
+    }
+
+    .custom-form-container h2 {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .custom-form-container p {
+        font-size: 8px;
+        margin-bottom: 20px;
+    }
+
+    footer .nav-link {
+        font-size: 14px;
+        margin-left: 12px;
+    }
+
+    footer .h-20 {
+        height: 60px !important;
+    }
 }
 /* 桌面端样式 */
 @media (min-width: 768px) {
